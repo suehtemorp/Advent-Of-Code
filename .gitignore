@@ -1,2 +1,6 @@
 # VSCode
 .vscode
+
+# Generated files
+# C++
+.out
