@@ -15,9 +15,17 @@ int main() {
     while (input.good()) {
         try {
             input >> n;
+            if (input.fail()) {
+                throw std::invalid_argument("Unable to read ID into first list");
+            }
+
             first.push_back(n);
 
             input >> n;
+            if (input.fail()) {
+                throw std::invalid_argument("Unable to read ID into second list");
+            }
+
             second.push_back(n);
         } catch(const std::exception& e) {
             printf("Unable to read ID: %s\n", e.what());
